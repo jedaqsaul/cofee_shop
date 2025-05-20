@@ -10,6 +10,7 @@ class Order:
         self.customer=customer
         self.coffee=coffee
         self.price=price
+        # customer
     @property
     def customer(self):
         return self._customer
@@ -20,4 +21,8 @@ class Order:
             self._customer=value
         else:
             raise TypeError("The customer should be an instance of Customer")
-    
+        # coffee
+    @property
+    def coffee(self):
+            return self._coffee
+        
