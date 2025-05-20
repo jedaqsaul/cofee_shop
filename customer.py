@@ -1,3 +1,5 @@
 class Customer:
     # represents a customer who can place coffee orders
-    pass
+    def __init__(self, name):
+        self.name=name
+   
