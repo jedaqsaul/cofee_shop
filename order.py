@@ -10,5 +10,9 @@ class Order:
         self.customer=customer
         self.coffee=coffee
         self.price=price
-
+    @property
+    def customer(self):
+        return self._customer
+    
+    
     
