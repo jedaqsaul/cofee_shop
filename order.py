@@ -14,5 +14,10 @@ class Order:
     def customer(self):
         return self._customer
     
-    
+    @customer.setter
+    def customer(self, value):
+        if isinstance(value, Customer):
+            self._customer=value
+        else:
+            raise TypeError("The customer should be an instance of Customer")
     
