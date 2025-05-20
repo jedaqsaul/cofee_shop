@@ -38,7 +38,8 @@ class Order:
         # price
     @property
     def price(self):
-        pass
+        return self._price
+    
 
 
         
