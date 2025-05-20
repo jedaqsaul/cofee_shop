@@ -5,4 +5,10 @@ from coffee import Coffee
 
 class Order:
     # Represents an order placed by a customer for a coffee
-    pass
+    # here we should implement a constructor method to initialize an order with customer, coffee and price
+    def __init__(self, customer, coffee,price):
+        self.customer=customer
+        self.coffee=coffee
+        self.price=price
+
+    
