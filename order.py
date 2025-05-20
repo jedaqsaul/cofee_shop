@@ -21,8 +21,24 @@ class Order:
             self._customer=value
         else:
             raise TypeError("The customer should be an instance of Customer")
+        
+
         # coffee
     @property
     def coffee(self):
-            return self._coffee
+        return self._coffee
+    
+    @coffee.setter
+    def coffee(self, value):
+        if isinstance(value, Coffee):
+            self._coffee=value
+        else:
+            raise TypeError("The coffee shoudl be an instance of cofee")
+        
+        # price
+    @property
+    def price(self):
+        pass
+
+
         
