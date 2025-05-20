@@ -40,6 +40,15 @@ class Order:
     def price(self):
         return self._price
     
+    @price.setter
+    def price(self, value):
+        if isinstance(value, float) and 1.0 <=value <=10.0:
+            # check if  price is a float in range
+            self._price =value
+        else:
+            # raise error it price is invalid
+            raise ValueError('The price should be a floating point value between 1.0 and 10.0')# raise error it price is invalid
+    
 
 
         
