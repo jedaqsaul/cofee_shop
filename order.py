@@ -4,6 +4,7 @@ from customer import Customer
 from coffee import Coffee
 
 class Order:
+    all_orders= []
     # Represents an order placed by a customer for a coffee
     # here we should implement a constructor method to initialize an order with customer, coffee and price
     def __init__(self, customer, coffee,price):
