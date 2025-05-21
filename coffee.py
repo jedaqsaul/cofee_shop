@@ -25,3 +25,9 @@ class Coffee:
     # returns how many orders were placed for this coffee
     def num_orders(self):
         return len(self.orders())
+    def average_price(self):
+        orders = self.orders()
+        if orders:
+            total = sum(order.price for order in orders)
+            return total / len(orders)
+        return 0.0
