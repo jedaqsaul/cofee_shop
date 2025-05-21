@@ -22,3 +22,6 @@ class Coffee:
         # from order import Order
        
         return list({order.customer for order in self.orders()})
+    # returns how many orders were placed for this coffee
+    def num_orders(self):
+        return len(self.orders())
