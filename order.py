@@ -52,4 +52,5 @@ class Order:
     
 
 
-        
+customer1=Customer()
+customer1.orders()

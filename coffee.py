@@ -1,3 +1,4 @@
+
 class Coffee:
     # represents a type of coffee that can be ordered
     def __init__(self, name):
@@ -13,3 +14,11 @@ class Coffee:
             self._name=value
         else:# raise an error here
             raise ValueError('Coffee is supposed to be a string with no less than 3 chars')
+    def orders(self):
+        from order import Order
+        return [order for order in Order.all_orders if order.coffee == self]
+
+    def customers(self):
+        # from order import Order
+       
+        return list({order.customer for order in self.orders()})
