@@ -4,13 +4,15 @@ from customer import Customer
 from coffee import Coffee
 
 class Order:
-    all_orders= []
+    all= []
     # Represents an order placed by a customer for a coffee
     # here we should implement a constructor method to initialize an order with customer, coffee and price
     def __init__(self, customer, coffee,price):
         self.customer=customer
         self.coffee=coffee
         self.price=price
+        Order.all.append(self)
+       
         # customer
     @property
     def customer(self):
@@ -51,6 +53,3 @@ class Order:
             raise ValueError('The price should be a floating point value between 1.0 and 10.0')# raise error it price is invalid
     
 
-
-customer1=Customer()
-customer1.orders()

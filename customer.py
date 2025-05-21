@@ -18,7 +18,7 @@ class Customer:
     def orders(self):
         from order import Order
         # ********************this one gives all this customer's orders
-        return[order for order in Order.all_orders if order.customer ==self]
+        return[order for order in Order.all if order.customer ==self]
     def coffees(self):
         from order import Order
         # gives a unique list of coffee they have ordered

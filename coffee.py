@@ -25,6 +25,9 @@ class Coffee:
     # returns how many orders were placed for this coffee
     def num_orders(self):
         return len(self.orders())
+    # returns the average price of coffee based on all orderes
+    # here we should implement sum and len
+    
     def average_price(self):
         orders = self.orders()
         if orders:
