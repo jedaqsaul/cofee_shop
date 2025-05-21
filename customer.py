@@ -23,3 +23,7 @@ class Customer:
         from order import Order
         # gives a unique list of coffee they have ordered
         return list({order.coffee for order in self.orders()})
+    
+    def create_order(self, coffee, price):
+        from order import Order  # Local import to avoid circular dependency
+        return Order(self, coffee, price)
